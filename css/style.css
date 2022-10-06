@@ -647,3 +647,7 @@ body {
    padding: 16px 43px;
    background-color: #f0f0f4;
 }
+
+.products__banner{
+   margin-bottom: 80px;
+}
