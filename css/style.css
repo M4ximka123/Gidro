@@ -461,6 +461,7 @@ body {
    text-align: center;
    padding: 52px 20px 31px;
    transition: all .3s;
+   width: 100%;
 }
 
 .product-item__title {
@@ -632,6 +633,10 @@ body {
 
 .slick-slide img{
    display: inline;
+}
+
+.products{
+   margin-bottom: 72px;
 }
 
 .product__more{
