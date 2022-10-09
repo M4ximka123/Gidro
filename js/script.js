@@ -1,4 +1,4 @@
-$(function(){
+$(function () {
    $('.banner-section__slider').slick({
       dots: true,
       prevArrow: '<button class="banner-section__slider-btn banner-section__slider-btnprev"><img src="images/icons/arrow-prev.svg" alt="стрелка на право"></button>',
@@ -7,7 +7,7 @@ $(function(){
 
 
 
-   $('.tab').on('click', function(e){
+   $('.tab').on('click', function (e) {
       e.preventDefault();
 
       $($(this).siblings()).removeClass('tab--active');
@@ -20,7 +20,7 @@ $(function(){
    });
 
 
-   $('.product-item__favorite').on('click', function(){
+   $('.product-item__favorite').on('click', function () {
       $(this).toggleClass('product-item__favorite--active')
    });
 
@@ -35,9 +35,15 @@ $(function(){
 
    $('.filter-style').styler();
 
-   $(".filter__item-drop").on('click', function(){
+   $(".filter__item-drop").on('click', function () {
       $(this).toggleClass('filter__item-drop--active');
       $(this).next().slideToggle('200');
-      
    });
+
+   $(".js-range-slider").ionRangeSlider({
+      type: "double",
+      min: 100000,
+      max: 500000,
+   });
+
 }); 

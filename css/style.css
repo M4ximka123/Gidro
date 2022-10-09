@@ -835,32 +835,32 @@ button.catalog__filter-btnline {}
    display: flex;
 }
 
-.catalog__inner-aside{
+.catalog__inner-aside {
    min-width: 290px;
    margin-right: 10px;
 }
 
-.catalog__inner-list{
+.catalog__inner-list {
    display: flex;
    justify-content: space-between;
    flex-wrap: wrap;
 }
 
-.catalog__inner-list .product-item__wrapper{
+.catalog__inner-list .product-item__wrapper {
    margin-bottom: 30px;
 }
 
-.pagination{
+.pagination {
    width: 100%;
    margin-top: 70px;
 }
 
-.pagination-list{
+.pagination-list {
    display: flex;
    justify-content: center;
 }
 
-.pagination-list__item{
+.pagination-list__item {
    padding: 6px 12px;
    border: 2px solid transparent;
    margin: 0 4px;
@@ -869,21 +869,21 @@ button.catalog__filter-btnline {}
    color: #c4c4c4;
 }
 
-.pagination-list__item.active{
+.pagination-list__item.active {
    border: 2px solid #1c62cd;
-   color:#1c62cd;
+   color: #1c62cd;
 }
 
-.pagination-list__item a{
+.pagination-list__item a {
    display: block;
 }
 
-.aside-filter__tabs{
+.aside-filter__tabs {
    display: flex;
    justify-content: space-between;
 }
 
-.aside-filter__tab{
+.aside-filter__tab {
    font-family: 'SFProDisplay-Regular';
    font-weight: 400;
    font-size: 16px;
@@ -894,23 +894,23 @@ button.catalog__filter-btnline {}
    width: 50%;
 }
 
-.aside-filter__tab.tab--active{
+.aside-filter__tab.tab--active {
    font-family: 'SFProDisplay-Bold';
    color: #2f3035;
    font-weight: 700;
 }
 
-.aside-filter__tab.tab--active span{
+.aside-filter__tab.tab--active span {
    padding-bottom: 7px;
    display: inline-block;
    border-bottom: 2px solid #1c62cd;
 }
 
-.aside-filter__item-drop{
+.aside-filter__item-drop {
    margin: 40px 0;
 }
 
-.aside-filter__item-title{
+.aside-filter__item-title {
    font-family: 'SFProDisplay-SemiBold';
    font-weight: 600;
    font-size: 16px;
@@ -918,14 +918,13 @@ button.catalog__filter-btnline {}
    padding-left: 26px;
 }
 
-.filter__item-drop{
-   margin-bottom: 20px;
+.filter__item-drop {
    position: relative;
    cursor: pointer;
 }
 
-.filter__item-drop::before{
-   content:"";
+.filter__item-drop::before {
+   content: "";
    position: absolute;
    background-image: url("../images/icons/arrow-drop.svg");
    background-repeat: no-repeat;
@@ -936,20 +935,134 @@ button.catalog__filter-btnline {}
    transform: rotate(0deg);
 }
 
-.filter__item-drop--active::before{
+.filter__item-drop--active::before {
    transform: rotate(180deg);
 }
 
-.aside-filter__content{
+.aside-filter__content {
    display: flex;
+   flex-wrap: wrap;
+   margin-top: 20px;
 }
 
-.aside-filter__content-box{
+.aside-filter__content-box {
    width: 50%;
 }
 
-.aside-filter__content-label{
+.aside-filter__content-label {
    font-size: 14px;
    line-height: 17px;
    cursor: pointer;
+}
+
+.jq-checkbox,
+.jq-radio {
+   background: #fff;
+   width: 14px;
+   height: 14px;
+   border: 1px solid #c4c4c4;
+   border-radius: 1px;
+   box-shadow: none;
+   vertical-align: -1px;
+   margin: 0 8px 0 0;
+}
+
+.jq-checkbox.checked,
+.jq-radio.focused {
+   background: #1c62cd;
+   border: none;
+}
+
+.jq-checkbox.checked .jq-checkbox__div {
+   width: 8px;
+   height: 6px;
+   margin: 4px 0 0 3px;
+   border-bottom: none;
+   border-left: none;
+   transform: rotate(0);
+   background-image: url("../images/icons/check.svg");
+}
+
+.jq-radio.checked .jq-radio__div {
+   width: 0;
+   height: 0;
+   margin: 0;
+   border-radius: 50%;
+   background: transparent;
+   box-shadow: none;
+}
+
+.aside-filter__content.aside-filter__content-radio {
+   flex-wrap: nowrap;
+}
+
+.irs--flat {
+   width: 100%;
+   margin-top: -15px;
+}
+
+.irs--flat .irs-from,
+.irs--flat .irs-to,
+.irs--flat .irs-single {
+   display: none;
+}
+
+.irs--flat .irs-min,
+.irs--flat .irs-max {
+   top: 55px;
+   padding: 0;
+   color: #2f3035;
+   font-size: 14px;
+   line-height: 17px;
+   text-decoration: underline;
+   text-shadow: none;
+   background-color: transparent;
+   font-family: 'Barlow', sans-serif;
+   border-radius: 0;
+   visibility: visible !important;
+   padding-left: 27px;
+}
+
+.irs-max::before,
+.irs-min::before {
+   position: absolute;
+   left: 0;
+   font-size: 14px;
+   line-height: 17px;
+   color: #c4c4c4;
+   text-decoration: none;
+}
+
+.irs-min::before {
+   content: "от";
+}
+
+.irs-max::before {
+   content: "до";
+}
+
+.irs--flat .irs-line {
+   border-radius: 0;
+   background-color: #e0e0e0;
+   height: 1px;
+   top: 25px;
+}
+
+.irs--flat .irs-bar {
+   top: 25px;
+   height: 3px;
+   background-color: #1c62cd;
+}
+
+.irs--flat .irs-handle {
+   top: 22px;
+   width: 8px;
+   height: 8px;
+   background-color: #1c42cd;
+   border-radius: 50%;
+}
+
+.irs--flat .irs-handle>i:first-child,
+.irs--flat .irs-handle.state_hover>i:first-child, .irs--flat .irs-handle:hover>i:first-child{
+   background-color: transparent;
 }
