@@ -32,4 +32,12 @@ $(function(){
       prevArrow: '<button class="product-slider__slider-btn product-slider__slider-btnprev"><img src="images/icons/arrowblack-prev.svg" alt="стрелка на право"></button>',
       nextArrow: '<button class="product-slider__slider-btn product-slider__slider-btnnext"><img src="images/icons/arrowblack-next.svg" alt="стрелка на право"></button>'
    });
+
+   $('.filter-style').styler();
+
+   $(".filter__item-drop").on('click', function(){
+      $(this).toggleClass('filter__item-drop--active');
+      $(this).next().slideToggle('200');
+      
+   });
 }); 
